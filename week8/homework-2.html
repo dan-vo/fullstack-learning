@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <link rel="stylesheet" href="homework-2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-nav">
+        <nav>
+          <a href="/">Winzard 4</a>
+          <a href="/">Pages</a>
+          <a href="/">. Winzard 4</a>
+        </nav>
+        <div class="right-nav">
+          <button>Actions</button>
+          <img
+            class="add-page-img"
+            src="https://www.svgrepo.com/show/381838/new-document-extension-page.svg"
+          />
+        </div>
+      </div>
+      <div class="main-body">
+        <div class="tab-contain">
+          <div class="tab">
+            <button
+              class="tablinks"
+              onclick="openCreateAccountTab(event, 'Add-Account')"
+            >
+              <div>1</div>
+              <div>Add Account</div>
+              <div>Create Custom Account</div>
+            </button>
+            <button
+              class="tablinks"
+              onclick="openCreateAccountTab(event, 'Your-Address')"
+            >
+              <div>2</div>
+              <div>Your Address</div>
+              <div>Set Your Address</div>
+            </button>
+            <button
+              class="tablinks"
+              onclick="openCreateAccountTab(event, 'Make-Payment')"
+            >
+              <div>3</div>
+              <div>Make Payment</div>
+              <div>Add Payment Options</div>
+            </button>
+            <button
+              class="tablinks"
+              onclick="openCreateAccountTab(event, 'Completed')"
+            >
+              <div>4</div>
+              <div>Completed</div>
+              <div>Review and Submit</div>
+            </button>
+          </div>
+          <div id="Add-Account">
+            <div>Enter your Account Details</div>
+            <form>
+              <label>First Name</label>
+              <input />
+              <div>Please enter your first name.</div>
+              <label>Last Name</label>
+              <input />
+              <div>Please enter your last name</div>
+              <label>Phone</label>
+              <input type="phonenumber" />
+              <div>Please enter your phone number</div>
+              <lebel>Email</lebel>
+              <input type="email" />
+              <div>Please enter your email address</div>
+              <div></div>
+            </form>
+            <button>Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

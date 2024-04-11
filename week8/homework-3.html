@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <link rel="stylesheet" href="homework-3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-nav">
+        <nav>
+          <a href="/">Winzard 4</a>
+          <a href="/">Pages</a>
+          <a href="/">. Winzard 4</a>
+        </nav>
+        <div class="right-nav">
+          <button>Actions</button>
+          <img
+            class="add-page-img"
+            src="https://www.svgrepo.com/show/381838/new-document-extension-page.svg"
+          />
+        </div>
+      </div>
+      <div class="main-body">
+        <div class="main-tab">
+          <button class="tablink" onclick="openPage('Home', this, 'white')">
+            <div class="tab-number number1">1</div>
+            <div class="tab-name-addacount">
+              <div class="tab-title">Add Account</div>
+              <div>Create Custom Account</div>
+            </div>
+          </button>
+          <button
+            class="tablink"
+            onclick="openPage('News', this, 'white')"
+            id="defaultOpen"
+          >
+            <div class="tab-number number2">2</div>
+            <div class="tab-name-address">
+              <div class="tab-title">Your Address</div>
+              <div>Set Your Address</div>
+            </div>
+          </button>
+          <button class="tablink" onclick="openPage('Contact', this, 'white')">
+            <div class="tab-number number3">3</div>
+            <div class="tab-name-payment">
+              <div class="tab-title">Make Payment</div>
+              <div>Add Payment Options</div>
+            </div>
+          </button>
+          <button class="tablink" onclick="openPage('About', this, 'white')">
+            <div class="tab-number number4">4</div>
+            <div class="tab-name-completed">
+              <div class="tab-title">Completed</div>
+              <div>Review and Submit</div>
+            </div>
+          </button>
+
+          <div id="Home" class="tabcontent">
+            <div class="add-account">
+              <div class="info enter-detail">Enter your Account Details</div>
+              <form>
+                <div class="info first-name">
+                  <label>First Name</label>
+                  <div><input class="name-input" /></div>
+                  <div class="sub-info">Please enter your first name.</div>
+                </div>
+                <div class="info class-name">
+                  <label>Last Name</label>
+                  <div><input class="name-input" /></div>
+                  <div class="sub-info">Please enter your last name</div>
+                </div>
+                <div class="info phone-number">
+                  <label>Phone</label>
+                  <div><input class="phone-email-input" /></div>
+                  <div class="sub-info">Please enter your phone number</div>
+                </div>
+                <div class="info input-email">
+                  <label>Email</label>
+                  <div><input class="phone-email-input" /></div>
+                  <div class="sub-info">Please enter your email address</div>
+                </div>
+              </form>
+              <hr style="width: 75%; text-align: left; margin-left: 0" />
+              <button class="next-button">Next</button>
+            </div>
+          </div>
+
+          <div id="News" class="tabcontent">
+            <h3>News</h3>
+            <p>Some news this fine day!</p>
+          </div>
+
+          <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+
+          <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Who we are and what we do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="homework-3.js"></script>
+  </body>
+</html>

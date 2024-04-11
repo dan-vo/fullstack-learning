@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 10px;
+      }
+      .even-pos {
+        background-color: lightgray;
+      }
+      button {
+        background-color: darkgray;
+        border-radius: 20px;
+        border: none;
+        padding-left: 5px 20px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td><button onclick="alert('Hooray!')">Edit</button></td>
+        </tr>
+        <tr class="even-pos">
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+          <td>
+            <button onclick="alert('Hooray!')">Edit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+          <td>
+            <button onclick="alert('Hooray!')">Edit</button>
+          </td>
+        </tr>
+        <tr class="even-pos">
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+          <td>Uk</td>
+          <td>
+            <button onclick="alert('Hooray!')">Edit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Wineceellars</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+          <td>
+            <button onclick="alert('Hooray!')">Edit</button>
+          </td>
+        </tr>
+        <tr class="even-pos">
+          <td>Magazzini Alimantari</td>
+          <td>Giovanni Revelli</td>
+          <td>Iraly</td>
+          <td>
+            <button onclick="alert('Hooray!')">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

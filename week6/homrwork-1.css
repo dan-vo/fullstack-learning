@@ -1,0 +1,50 @@
+.sign-in-box {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  vertical-align: center;
+  margin-top: 40px;
+}
+
+/* Design for sign-in box */
+
+.signin-box {
+  padding-top: 300px;
+}
+
+/*center Signin and create account*/
+.box-text {
+  vertical-align: center;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+/* change the color of create account*/
+.account {
+  color: #3699ff;
+}
+
+/*design the box text*/
+
+input {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+}
+/*font of signin*/
+
+.text-and-img {
+  left: 600px;
+}
+
+.google-logo {
+  width: 20px;
+}

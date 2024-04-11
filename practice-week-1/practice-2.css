@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.info-side {
+  background-color: white;
+  width: 530px;
+}
+
+.create-account-side {
+  background-color: #f3f5f9;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.create-account {
+  color: #181c32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.account-center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.account-question {
+  color: lightgrey;
+  margin-top: 10px;
+}
+
+a {
+  color: #3699ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #0073e9;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  margin-left: 420px;
+  background-color: #3699ff;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.info-side {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-logo {
+  margin-top: 60px;
+  width: 200px;
+  padding-bottom: 100px;
+}
+
+.number {
+  border: 1px solid black;
+  border-radius: 100px;
+}

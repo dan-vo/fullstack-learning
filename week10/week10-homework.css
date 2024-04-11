@@ -1,0 +1,411 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-img {
+  width: 25px;
+}
+
+.top-nav {
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.function-nav {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #7e8299;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+}
+
+.function-nav:hover {
+  background-color: lightgrey;
+  color: blue;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav-tab {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.right-nav-tab:hover {
+  background-color: lightgray;
+}
+
+.profile-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.left-profile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.item-left-profile-nav {
+  text-decoration: none;
+  color: lightgray;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.item-left-profile-nav:hover {
+  color: blue;
+}
+
+.action-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav-ietm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  color: blue;
+  width: 80px;
+  height: 35px;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.right-nav-ietm:hover {
+  color: white;
+  background-color: blue;
+}
+
+.container {
+  background-color: #f3f6f9;
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+  background-color: #f3f6f9;
+  display: flex;
+  justify-content: space-around;
+  width: 66%;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.infor-column {
+  position: relative;
+
+  background-color: white;
+  height: 100%;
+  margin-top: 20px;
+
+  border-radius: 5px;
+  width: 30%;
+  margin-right: 30px;
+}
+
+.personal-detail {
+  margin-left: 160px;
+}
+
+.dot-img {
+  width: 25px;
+  padding-left: 341px;
+  margin-top: 10px;
+}
+
+.personal-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-img {
+  width: 100px;
+  position: absolute;
+  top: 63px;
+  left: 23px;
+  border-radius: 5px;
+}
+
+.personal-tile {
+  color: lightgrey;
+  font-size: 15px;
+  margin-top: 0px;
+}
+
+.chat-button {
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background-color: #72aee6;
+  color: white;
+}
+
+.chat-button:hover {
+  background-color: #4f94d4;
+}
+
+.follow-button {
+  margin-left: 5px;
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background-color: #68de7c;
+  color: white;
+}
+
+.follow-button:hover {
+  background-color: #00ba37;
+}
+
+.profile-detail {
+  margin-left: 23px;
+}
+
+.profile-specific-email {
+  margin-left: 157px;
+  color: lightgray;
+}
+
+.profile-specific-phone {
+  margin-left: 190px;
+  color: lightgray;
+}
+
+.profile-specific-location {
+  margin-left: 208px;
+  color: lightgray;
+}
+
+.profile-tab {
+  margin-top: 40px;
+}
+
+.profile-icon {
+  width: 25px;
+  margin-right: 30px;
+}
+
+.profile-overview {
+  display: flex;
+  justify-content: flex-start;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.profile-overview:hover {
+  color: blue;
+  background-color: lightgrey;
+}
+
+.profile-num {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: pink;
+  border-radius: 5px;
+  margin-left: 100px;
+  justify-content: center;
+}
+
+.new {
+  margin-left: 100px;
+  width: 40px;
+  background-color: lightblue;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.updated-infor-tab {
+  background-color: white;
+  width: 75%;
+  margin-top: 20px;
+  margin-right: 300px;
+  border-radius: 5px;
+}
+
+.top-infor-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.personal-infor-button {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.update-text {
+  color: lightgray;
+}
+
+.save-change-button {
+  width: 116px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #31deb2;
+  color: white;
+}
+
+.save-change-button:hover {
+  background-color: #2fa789;
+}
+
+.cancel-button {
+  width: 86px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+}
+
+.cancel-button:hover {
+  background-color: #66655f;
+}
+
+.avarta-img {
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+.user-infor-enter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.avatar-infor {
+  margin-left: 200px;
+}
+
+.avatar-text {
+  margin-top: 50px;
+}
+
+.customer-infor-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.img-info {
+  color: lightgray;
+  font-size: 12px;
+}
+
+.input-name {
+  margin-left: 170px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+.input-first-name {
+  margin-left: 173px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+.input-company-name {
+  margin-left: 139px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+.company-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+.company-note {
+  margin-left: 274px;
+  color: lightgray;
+}
+
+.contac-infor {
+  display: flex;
+  margin-left: 154px;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+.contact-infor-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input-contact-infor {
+  margin-left: 0px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+.contact-phone {
+  margin-top: 76px;
+}
+
+.contact-infor-note {
+  color: lightgrey;
+}
+
+.input-email {
+  margin-left: 155px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+.input-company-side {
+  margin-left: 160px;
+  width: 388px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dfdfda;
+}
+
+footer {
+  height: 30px;
+}
+
+hr {
+  border: 1px solid #ccc; /* Border style for the line */
+  margin: 20px 0; /* Margin above and below the line */
+}

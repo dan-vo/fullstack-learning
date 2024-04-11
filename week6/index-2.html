@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 6</title>
+    <link rel="stylesheet" href="index-2.css" />
+  </head>
+  <body>
+    <script>
+      let numbers = [3, 10, 11, 9, 8, 9, 3, 2, 1, 999];
+
+      console.log('value of index 0', numbers[0]);
+      console.log('value of index 5', numbers[5]);
+      console.log('total items in the array', numbers.length);
+      console.log('the last item in the array', numbers[numbers.length - 1]);
+      console.log(numbers);
+
+      function countFromZeroToTen() {
+        for (let i = 0; i < 11; i++) {
+          console.log(i);
+        }
+      }
+
+      countFromZeroToTen();
+
+      function getTheLargestNumber(numbers) {
+        let biggestNumber;
+
+        for (let i = 0; i <= numbers.length - 1; i++) {
+          let currentNumber = numbers[i];
+
+          if (i === 0) {
+            biggestNumber = currentNumber;
+          }
+
+          if (currentNumber > biggestNumber) {
+            biggestNumber = currentNumber;
+          }
+        }
+
+        return biggestNumber;
+      }
+
+      numbers = [999, 1000, 1000000, 10, -3];
+      let largestNumberResult = getTheLargestNumber(numbers);
+
+      console.log('The largest number of', numbers, largestNumberResult);
+    </script>
+  </body>
+</html>

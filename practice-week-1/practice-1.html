@@ -1,0 +1,195 @@
+<html lang="en">
+  <head>
+    <title>Practice week</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      //task1 add function
+
+      function add(x, y) {
+        return x + y;
+      }
+
+      //task 2 minus function
+      function minus(x, y) {
+        return x - y;
+      }
+
+      //task 3 check exam result function
+      //create function with the score is number.
+      // compare the score with condition
+      // if the score more than or equal to 50: Pass
+      // if the score less than 50: Fail
+
+      function checkExamResult(score) {
+        if (score >= 50) {
+          return 'Pass';
+        } else {
+          return 'Fails';
+        }
+      }
+
+      // devide function
+
+      function devide(x, y) {
+        return x / y;
+      }
+
+      //get Average function
+
+      function getAverage(x, y) {
+        return (x + y) / 2;
+      }
+
+      // get Grade function
+      // compare the score with the condition of Grade
+      // the return the Grade
+      //A: score is larger or equal 90
+      //B: score is larger or equal 80 but less than 90
+      //C: score is larger or equal 70 but less than 80
+      //D: score is larger or equal 60 but less than 70
+      //E: score is larger or equal 50 but less than 60
+      //F: score is less than 50
+
+      function getGrade(score) {
+        if (score >= 90) {
+          return 'A';
+        } else if (score >= 80 && score < 90) {
+          return 'B';
+        } else if (score >= 70 && score < 80) {
+          return 'C';
+        } else if (score >= 60 && score < 70) {
+          return 'D';
+        } else if (score >= 50 && score < 60) {
+          return 'E';
+        } else {
+          return 'F';
+        }
+      }
+
+      //function get numbers larger than ten
+      // create an empty array to contain the number larger than ten
+      //using the loop to check all the number in array
+      //If the number larger than ten push to the empty array
+      function getNumbersLargerThanTen(numbers) {
+        let result = [];
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i] > 10) {
+            result.push(numbers[i]);
+          }
+        }
+        return result;
+      }
+
+      //function sum of numbers of array
+      //create a variale total that will be show the result of fucntion.
+      //create a cuurent number.
+      //the calculate will be current total + numbers[i]
+      //using for loop to plus all the numbers in array
+
+      function sum(numbers) {
+        let total = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          total = total + currentNumber;
+        }
+        return total;
+      }
+
+      //function get array average.
+      //using sum(numbers)
+
+      function getArrayAverage(numbers) {
+        let average = sum(numbers) / numbers.length;
+        return average;
+      }
+
+      // function unique Items
+      //Create a function to remove duplicates from an array and return the unique items in the array
+
+      function uniqueItems(items) {
+        // create an empty array to contain the array.
+        let results = [];
+        // create a for loop to check all the numbers in the array.
+        for (let i = 0; i < items.length; i++) {
+          // create a condition to check the value in the array,
+          //If the same, return the unique item.
+          let currentCharacter = items[i];
+          if (currentCharacter !== items[i]) {
+            results.push(currentCharacter);
+          }
+        }
+        return results;
+      }
+
+      //reverse function
+      // It will start from the last position of the array. (array.length -1)
+
+      function reverse(items) {
+        let result = [];
+
+        for (let i = items.length - 1; i >= 0; i--) {
+          let currentNumber = items[i];
+          result.push(currentNumber);
+        }
+        return result;
+      }
+
+      // reverseSentence
+
+      function reverseString(sentence) {
+        let result = [];
+        for (let i = sentence.length; sentence.length >= 0; i--) {
+          result = result + sentence[i];
+        }
+        return result;
+      }
+
+      //uniqueInOrder(items) function
+      // if the items same value with next item, will take the first item
+
+      function uniqueInOrder(items) {
+        let result = [];
+        for (let i = 0; i <= items.length; i++) {
+          let currentItems = items[i];
+          let nextItems = items[i + 1];
+          if (currentItems !== nextItems) {
+            result.push(currentItems);
+          }
+        }
+        return result;
+      }
+
+      //addFromOneUntil(number) function
+      //calculate the sum of all numbers up to a given number, starting from 1
+      // If number is less than 1, return the provided number
+      //If number is not a number, return false
+
+      function addFromOneUntil(number) {
+        // If number is less than 1, return the provided number
+        if (number < 1) {
+          return number;
+        }
+        // If number is not a number, return false
+        if (number !== 'number') {
+          return false;
+        }
+        //addFromOneUntil(number) function
+        let result = 0;
+        for (let i = 1; i <= number.length + 1; i++) {
+          result = result + i;
+        }
+        return result;
+      }
+    </script>
+    <script src="./practice-1.spec.js"></script>
+  </body>
+</html>

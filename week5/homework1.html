@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+  </head>
+  <body>
+    <!--getSum homework-->
+    <script>
+      function createSum(x, y) {
+        let sum = x + y;
+        return sum;
+      }
+
+      let sumResult = createSum(7, 8);
+      console.log('sum result', sumResult);
+    </script>
+    <!--convert F to C homework-->
+    <script>
+      function convertFtoC(z) {
+        let calculateFtoC = ((z - 32) * 5) / 9;
+        return calculateFtoC;
+      }
+
+      let cTemperature = convertFtoC(120);
+      console.log('temperature result', cTemperature);
+    </script>
+
+    <!--greetMe homework-->
+    <script>
+      function greetMe(myname, age) {
+        let greet = `My name is ${myname} and I am ${age} years old!`;
+        return greet;
+      }
+
+      let greetMeResult = greetMe('Dan', 20);
+      console.log('greet me result', greetMeResult);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <title>Practice week</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/5.1.2/boot1.min.js"></script>
+  </head>
+  <body>
+    <script>
+      function minus(x, y) {
+        let result = x - y;
+        return result;
+      }
+
+      function checkExamResult(score) {
+        if (score >= 50) {
+          return 'Pass';
+        } else {
+          return 'Fail';
+        }
+      }
+
+      function sum(numbers) {
+        let result = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          result = result + numbers[i];
+        }
+        return result;
+      }
+
+      function getArrayAverage(numbers) {
+        let total = sum(numbers);
+
+        return total / numbers.length;
+      }
+
+      function addFromOneUntil(number) {
+        // input validation
+        if (typeof number !== 'number') {
+          return false;
+        }
+
+        if (number <= 1) {
+          return number;
+        }
+
+        // we need total = 0
+        // because the function ask us to start from 1
+        // so we will loop through 1 to the provided number
+        // each time we loop we will add total with the current numberf
+        let total = 0;
+
+        for (let i = 1; i <= number; i++) {
+          total = total + i;
+        }
+        return total;
+      }
+    </script>
+    <script src="./index.spec.js"></script>
+  </body>
+</html>

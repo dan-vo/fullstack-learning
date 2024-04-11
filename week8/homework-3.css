@@ -1,0 +1,229 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-nav {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 70px;
+}
+
+.add-page-img {
+  width: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Set height of body and the document to 100% */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: lightgrey;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 13px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tab-title {
+  font-weight: bold;
+}
+
+.tab-number {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: blue;
+}
+
+.tab-number:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {
+  background-color: white;
+}
+#News {
+  background-color: green;
+}
+#Contact {
+  background-color: blue;
+}
+#About {
+  background-color: orange;
+}
+
+.main-tab {
+  width: 1167px;
+  height: 1027px;
+  padding-left: 202px;
+  padding-top: 50px;
+}
+
+.main-body {
+  background-color: lightgrey;
+}
+
+.add-account {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.info {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.enter-detail {
+  font-weight: bold;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.name-input {
+  height: 40px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: lightcyan;
+  border: none;
+}
+
+.phone-email-input {
+  height: 40px;
+  width: 260px;
+  border-radius: 5px;
+  background-color: lightcyan;
+  border: none;
+}
+
+.sub-info {
+  color: lightgray;
+}
+
+.phone-number {
+  position: static;
+}
+
+.input-email {
+  position: absolute;
+  top: 564px;
+  right: 880px;
+}
+
+.next-button {
+  margin-top: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 644px;
+}
+
+.tab-name-addacount {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.number1 {
+  position: absolute;
+  top: 156px;
+  right: 1667px;
+}
+
+.tab-name-address {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.number2 {
+  position: absolute;
+  top: 156px;
+  right: 1425px;
+}
+
+.tab-name-payment {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.number3 {
+  position: absolute;
+  top: 156px;
+  right: 1188px;
+}
+
+.tab-name-completed {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.number4 {
+  position: absolute;
+  top: 156px;
+  right: 944px;
+}

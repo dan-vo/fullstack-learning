@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <link rel="stylesheet" href="homework2.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="contener">
+      <div class = >First name</div>
+      <input type="text" class="myfirstname input" name="firstname" maxlength="100" />
+      <div class="rol">Last name</div>
+      <input type="text" class="mylastname input" name="lastname" maxlength="100" />
+      <div class="rol">Age</div>
+      <input type="number" class="myage age-input" name="age" min="3" max="140"/>
+      <div class="summary-result rol"></div>
+      <button class = "rol">Create Summary</button>
+    </div>
+    <script>
+      function mySummary(firstname, lastname, age) {
+        return `Hello, my name is ${firstname} ${lastname}. I am ${age} years old!`;
+      }
+
+      let myFisrtName = document.querySelector('.myfirstname');
+      let myLastName = document.querySelector('.mylastname');
+      let myAge = document.querySelector('.myage');
+      let button = document.querySelector('button');
+      let summaryResult = document.querySelector('.summary-result');
+
+      
+
+      button.addEventListener('click', function () {
+        let firstname = myFisrtName.value;
+        let lastname = myLastName.value;
+        let age = myAge.value;
+        let myResult = mySummary(firstname, lastname, age);
+
+        if(!firstname || !lastname || !age){
+            alert ("Please fill all the boxes");
+            return;
+        }
+
+
+
+        summaryResult.textContent = myResult;
+      });
+    </script>
+  </body>
+</html>

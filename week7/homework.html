@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="homework.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class = "input-box">
+        <input class="input" />
+        <input class="inputresult" />
+    </div>
+    <div class = "enter-button">
+      <div>
+        <button class = "caculator-btn" = >(</button>
+        <button class = "caculator-btn">(</button>
+        <button class = "caculator-btn del-btn">DEL</button>
+        <button class = "caculator-btn">AC</button>
+      </div>
+      <div>
+        <button class = "caculator-btn">7</button>
+        <button class = "caculator-btn">8</button>
+        <button class = "caculator-btn">9</button>
+        <button class = "caculator-btn">/</button>
+      </div>
+      <div>
+        <button class = "caculator-btn">4</button>
+        <button class = "caculator-btn">5</button>
+        <button class = "caculator-btn">6</button>
+        <button class = "caculator-btn">*</button>
+      </div>
+      <div>
+        <button class = "caculator-btn">1</button>
+        <button class = "caculator-btn">2</button>
+        <button class = "caculator-btn">3</button>
+        <button class = "caculator-btn">-</button>
+      </div>
+      <div>
+        <button class = "caculator-btn">0</button>
+        <button class = "caculator-btn">1</button>
+        <button class = "caculator-btn equal-btn">=</button>
+        <button class = "caculator-btn">+</button>
+      </div>
+    </div>
+    </div>
+    <script>
+        // create function to sellect all buttons
+        let buttons = document.querySelectorAll('.caculator-btn');
+        let input = document.querySelector('.input');
+        let totalResult = document.querySelector('.inputresult');
+        let cleanInput = function(){
+            input.value = '';
+                    };
+                    
+        let deleteLastInput = function(){
+            input.value = input.value.slice(0, -1);
+        };
+
+        let calculateResult = function(){
+    let inputValue = input.value;
+    let result = '';
+    
+            
+    
+    
+
+    try {
+        result = eval(inputValue);
+    } catch(e){
+       result = 'ERROR';
+    }
+    input.value = inputValue;
+    totalResult.value = result;
+};
+        let onButtonClick = function (event){
+            let button = event.currentTarget;
+            let action = button.innerText;
+        
+
+
+            // get input value
+            
+
+            if (action ==='AC'){
+              
+                    cleanInput();
+
+            } 
+            else if (action === 'DEL'){
+                deleteLastInput();
+            }
+
+           else if(action === '='){
+            calculateResult();
+            }
+            else{
+                let inputValue = input.value;
+            let newInputValue = inputValue + action;
+            input.value = newInputValue;
+            }
+           
+        };
+        
+        //create for loop to addEventLististener to all buttons
+        // add a 'click' event to all our buttons
+        for( let i = 0; i < buttons.length; i++){
+            currentButton = buttons[i];
+            currentButton.addEventListener('click', onButtonClick);
+        }
+
+        // add the button to the input
+        // If the button is DEL, AC or '=' is visible in input
+
+
+        
+
+        
+
+
+    
+    </script>
+  </body>
+</html>

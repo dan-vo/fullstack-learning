@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+    <style>
+      h1 {
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgrey;
+      }
+      body {
+        background-color: black;
+        font-family: Helvetica, Arial;
+      }
+      form {
+        background-color: white;
+        width: 450px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        border: 2px solid lightgrey;
+        border-radius: 10px;
+      }
+
+      .input-style {
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 18px;
+        border: 2px solid lightgrey;
+      }
+      button {
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        background-color: lightgreen;
+        border: none;
+        border-radius: 6px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: lightseagreen;
+      }
+      div {
+        margin-top: 20px;
+      }
+      button {
+        margin-top: 20px;
+      }
+      .hobbie-vert label {
+        display: flex;
+        margin-top: 5px;
+      }
+      .space-checkbox {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>About me</h1>
+      <div>
+        <label for="input_name"
+          >Name
+          <input class="input-style" id="input_name" type="text" name="name" />
+        </label>
+      </div>
+      <div>
+        <label
+          >Age
+          <input class="input-style" type="number" name="age" />
+        </label>
+      </div>
+      <div>
+        <label
+          >DoB
+          <input class="input-style" type="date" name="dob" />
+        </label>
+      </div>
+      <div>
+        <label>About me</label>
+        <textarea class="input-style" name="about-me"></textarea>
+      </div>
+
+      <div>
+        <label>Gender</label>
+        <select class="input-style" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="hobbie-vert">
+        <div>Hobbies</div>
+        <label>
+          <input
+            class="space-checkbox"
+            type="checkbox"
+            name="hobbies"
+            value="soccer"
+          />
+          Soccer
+        </label>
+
+        <label>
+          <input
+            class="space-checkbox"
+            type="checkbox"
+            name="hobbies"
+            value="video-game"
+          />
+          Video game
+        </label>
+
+        <label>
+          <input
+            class="space-checkbox"
+            type="checkbox"
+            name="hobbies"
+            value="sleep"
+          />
+          Sleep
+        </label>
+      </div>
+      <div>
+        Are you a code ninja?
+        <label> <input type="radio" name="codeninja" value="yes" />Yes </label>
+        <label> <input type="radio" name="codeninja" value="no" />No </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

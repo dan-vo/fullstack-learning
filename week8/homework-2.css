@@ -1,0 +1,20 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-nav {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-page-img {
+  width: 30px;
+}
+
+.tab-contain {
+  width: 800px;
+  background-color: lightgray;
+}
