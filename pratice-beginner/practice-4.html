@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>HTML Template</title>
+   <style>
+    body{
+        background-color: lightgrey;
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        margin-top: 20px;
+        width: 400px;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        border-radius: 20px;
+    }
+    p{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    input{
+        width: 300px;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 2px solid blue;
+    }
+
+    button{
+        width: 315px;
+        padding: 10px;
+        color:white;
+        background-color: lightblue;
+        border-radius: 5px;
+        border: none;
+    }
+
+    button:hover {
+        background-color: darkblue;
+    }
+        
+    
+   </style>
+ </head>
+ <body>
+    <div class="container">
+        <p>Convert Text to Uppercase</p>
+        <input></input>
+        <button>Convert to uppercase</button>
+        <div class = "output"></div>
+    </div>
+ </body>
+ <script>
+    let input = document.querySelector('input');
+    let button = document.querySelector('button');
+    let outputDisplay = document.querySelector('.output');
+
+    let onButtonClicked = function(){
+        let currentText = input.value;
+        let upperCaseText = currentText.toUpperCase();
+        outputDisplay.innerHTML = upperCaseText;
+    }
+
+    button.addEventListener('click', onButtonClicked);
+ </script>
+</html>

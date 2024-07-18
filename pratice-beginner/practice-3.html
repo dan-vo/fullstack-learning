@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>HTML Template</title>
+   <style>
+    body{
+        background-color: lightgrey;
+    }
+    .container{
+        margin: 50px;
+        background-color: white;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    }
+
+    .name{
+        font-size: 15px;
+        padding: 5px;
+        border: 1px solid lightgrey;
+        border-radius: 5px blue;
+
+    }
+
+    button{
+        font-size: 15px;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        background-color: lightblue;
+
+    }
+    button:hover{
+        background-color: darkblue ;
+    }
+
+    
+   </style>
+ </head>
+ <body>
+    <div class="container">
+        <h1>Enter Your Name</h1>
+    <div>
+        <input class="firstName name"></input>
+        <input class="lastName name"></input>
+        <button>Show Full Name</button>
+        <div class="showfullname"></div>
+    </div>
+    </div>
+ </body>
+ <script>
+    let button = document.querySelector('button');
+    let inputFirstName = document.querySelector('.firstName');
+    let inputLastName = document.querySelector('.lastName');
+    let showFullName = document.querySelector('.showfullname');
+
+    let onButtonClicked = function(){
+        
+let firstName = inputFirstName.value;
+let lastName = inputLastName.value;
+showFullName.innerHTML =  `Full name: ${firstName} ${lastName}`;
+
+    }
+
+    button.addEventListener('click', onButtonClicked);
+ </script>
+</html>
