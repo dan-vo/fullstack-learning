@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .buttonclicked {
+        display: flex;
+        padding: 20px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 2px;
+        background-color: lightgray;
+      }
+
+      .changecolor {
+        color: blue;
+        border: 1px solid blue;
+      }
+
+      .changecolor:hover {
+        background-color: rgba(8, 61, 237, 0.496);
+        color: white;
+        border: none;
+      }
+
+      .changesize {
+        color: orange;
+        border: 1px solid orange;
+      }
+      .changesize:hover {
+        color: white;
+        background-color: orange;
+      }
+
+      .hidebox {
+        color: red;
+        border: 1px solid red;
+      }
+
+      .hidebox:hover {
+        color: white;
+        background-color: red;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttonclicked">
+        <button class="changecolor">Change the box background to "red"</button>
+        <button class="changesize">Make the box become bigger</button>
+        <button class="hidebox">Hide the box</button>
+      </div>
+      <div class="box"></div>
+    </div>
+  </body>
+  <script>
+    let changeColorButton = document.querySelector('.changecolor');
+    let changeSizeButton = document.querySelector('.changesize');
+    let hideBoxButton = document.querySelector('.hidebox');
+    let boxDisplay = document.querySelector('.hidebox');
+    let box = document.querySelector('.box');
+
+    let onChangeColorButton = function () {
+      if (box.style.backgroundColor === 'grey') {
+        box.style.backgroundColor = 'red';
+
+        changeColorButton.innerHTML =
+          'Change the box background to defult color';
+      } else {
+        box.style.backgroundColor = 'grey';
+        changeColorButton.innerHTML = `Change the box background to "red"`;
+      }
+    };
+
+    changeColorButton.addEventListener('click', onChangeColorButton);
+  </script>
+</html>

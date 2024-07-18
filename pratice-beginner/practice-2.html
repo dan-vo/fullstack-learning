@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>HTML Template</title>
+   <style>
+    .container{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+    justify-content: center;
+    
+    }
+
+    .input-value{
+        font-size: 20px;
+        padding: 5px 20px;
+        margin-right: 10px;
+        border: 2px solid blue;
+        border-radius: 5px;
+    }
+
+    .click-btn{
+        font-size: 15px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    
+   </style>
+ </head>
+ <body>
+    <div class="container">
+        <input class="input-value"></input>
+        <button class="click-btn">Click me to change the input value</button>
+    </div>
+ </body>
+ <script>
+    let button = document.querySelector('.click-btn');
+    let input = document.querySelector('.input-value');
+
+    let changeValue = function(){
+        input.value='A button is clicked';
+    }
+
+    button.addEventListener('click',changeValue);
+ </script>
+</html>
