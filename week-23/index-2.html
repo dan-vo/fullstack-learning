@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 23</title>
+  </head>
+  <body>
+    <button data-component="larger">Console.log values larger than 10</button>
+    <button data-component="smaller">Console.log values smaller than 10</button>
+
+    <script>
+      const numbers = [1, 35, 60, 5, 888, 2];
+
+      const lagerBtn = document.querySelector('[data-component="larger"]');
+      const onLargerBtnClicked = () => {
+        const currentNumber = '';
+        const items = number.filter((currentNumber) => {
+          return currentNumber;
+        });
+
+        console.log(items);
+      };
+
+      document
+        .querySelector('[data-component="larger"]')
+        .addEventListener('click', onLargerBtnClicked);
+    </script>
+  </body>
+</html>
