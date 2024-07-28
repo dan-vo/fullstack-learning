@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <!-- Bootstrap Font Icon CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+        margin: 0px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-container {
+        background-color: #fff;
+        width: 550px;
+        padding: 16px;
+      }
+
+      .main-container:hover {
+        box-shadow: 2px 2px 2px 2px #b83f45;
+      }
+
+      h1 {
+        color: #b83f45;
+        font-size: 80px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+      }
+
+      .showtaskbutton,
+      .completedalltaskbutton {
+        border: none;
+        background-color: white;
+      }
+
+      .removeAllCompleteButton {
+        display: none; /* Hide initially */
+      }
+
+      .input-area {
+        width: 550px;
+        border-radius: 5px;
+      }
+
+      .inputBox {
+        border: none;
+        font-size: 30px;
+        width: 90%;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        font-size: 24px;
+        color: #949494;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .circle {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid #b83f45;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .completed .circle {
+        background-color: #b83f45;
+      }
+
+      .itemDetail {
+        flex-grow: 1;
+        margin-left: 10px;
+      }
+
+      .itemDetailCross {
+        text-decoration: line-through;
+      }
+
+      .deleteButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .deleteButton img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>todos</h1>
+      <div class="main-container">
+        <div class="header">
+          <div class="input-area">
+            <button class="completedalltaskbutton removeAllCompleteButton">
+              <i class="bi bi-chevron-down down-button showtaskbutton"></i>
+            </button>
+            <input
+              class="inputBox"
+              id="taskInput"
+              type="text"
+              placeholder="What needs to be done?"
+            />
+            <ul class="taskList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let inputTask = document.querySelector('#taskInput');
+      let completedButton = document.querySelector('.completedalltaskbutton');
+
+      let addTask = function (event) {
+        if (event.key === 'Enter') {
+          let newTask = inputTask.value;
+          completedButton.classList.remove('removeAllCompleteButton');
+          if (newTask) {
+            let listItem = createTaskItem(newTask);
+            document.querySelector('.taskList').appendChild(listItem);
+            inputTask.value = ''; // Clear the input after adding
+          } else {
+            completedButton.classList.add('removeAllCompleteButton');
+            alert('Please enter a task.'); // Only show alert if the input is empty
+          }
+        }
+      };
+
+      function createTaskItem(task) {
+        let listItem = document.createElement('li');
+
+        listItem.innerHTML = `
+          <div class="circle" onclick="toggleTaskCompletion(event)"></div>
+          <div class="itemDetail">${task}</div>
+          <button class="deleteButton" data-component="delete">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQADH7QGLH7ZRrR_ktfGoz-yySacpCnd1ahhl-W_G5Uyn6jf9R1F87t-1hUmU4AJAFt9Wg&usqp=CAU" alt="Delete">
+          </button>
+        `;
+
+        let deleteBtn = listItem.querySelector('[data-component="delete"]');
+        deleteBtn.addEventListener('click', onDeleteButtonClick);
+
+        return listItem; // Return the new list item
+      }
+
+      function onDeleteButtonClick(event) {
+        let currentButton = event.target;
+        let listItem = currentButton.closest('li');
+        listItem.remove();
+        completedButton.classList.add('removeAllCompleteButton');
+      }
+
+      function toggleTaskCompletion(event) {
+        let listItem = event.target.closest('li');
+        listItem.classList.toggle('completed');
+        let itemDetail = listItem.querySelector('.itemDetail');
+        itemDetail.classList.toggle('itemDetailCross');
+      }
+
+      // Add keydown event listener to input for task addition
+      inputTask.addEventListener('keydown', addTask);
+      completedButton.addEventListener('click', completedAllTask);
+    </script>
+  </body>
+</html>
